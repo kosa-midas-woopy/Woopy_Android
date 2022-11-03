@@ -14,6 +14,20 @@
         android:theme="@style/Theme.Woopy_Android"
         tools:targetApi="31">
         <activity
+            android:name=".EditOptionActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity_option"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".view.admin.AdminSignupActivity"
             android:exported="false">
             <meta-data
