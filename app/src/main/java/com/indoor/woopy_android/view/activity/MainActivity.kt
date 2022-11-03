@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragments_frame, homeFragment).commit()
 
+
                 }
                 R.id.menu_request -> {
                     requestFragment = RequestFragment.newInstance()
