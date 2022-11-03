@@ -6,9 +6,12 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.indoor.woopy_android.R
 import com.indoor.woopy_android.databinding.ActivityUserLoginBinding
+import com.indoor.woopy_android.view.user.viewmodel.UserLoginViewModel
 
 class UserLoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUserLoginBinding
+    private lateinit var loginViewModel : UserLoginViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(
@@ -16,13 +19,12 @@ class UserLoginActivity : AppCompatActivity() {
             R.layout.activity_user_login
         )
 
+        observeViewModel()
+
         binding.backBtn.setOnClickListener {
             super.onBackPressed()
         }
 
-        binding.btnUserLogin.setOnClickListener {
-
-        }
 
         binding.tvUserSignUp.setOnClickListener {
             val intent = Intent(this@UserLoginActivity, UserSignupUserActivity::class.java)
@@ -31,5 +33,12 @@ class UserLoginActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    private fun observeViewModel() = with(loginViewModel) {
+        onClickLSignInEvent.observe(this@UserLoginActivity) {
+            startActivity(Intent(this@UserLoginActivity, MainActivity::class.java))
+            finish()
+        }
     }
 }

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".view.admin.management.MemberInfoModifyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.065" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.935" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_btn"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintBottom_toTopOf="@id/guideline_top"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="0.8dp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintTop_toTopOf="@id/guideline_top"
+            app:layout_goneMarginTop="50dp"
+            android:background="#8C8C8C"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/ic_user_profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_user"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="김대리"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_user_profile"
+            app:layout_constraintLeft_toRightOf="@id/ic_user_profile"
+            app:layout_constraintTop_toTopOf="@id/ic_user_profile"/>
+
+        <View
+            android:id="@+id/line_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0.8dp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/ic_user_profile"
+            app:layout_goneMarginTop="50dp"
+            android:background="#8C8C8C"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="부서"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@id/line_bottom"
+            android:layout_marginTop="40dp"/>
+
+        <EditText
+            android:id="@+id/edit_department"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_box"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/txt_department"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/txt_posision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="직급"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@id/edit_department"
+            android:layout_marginTop="40dp"/>
+
+        <EditText
+            android:id="@+id/edit_position"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_box"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/txt_posision"
+            android:layout_marginTop="4dp"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_radius_button"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+            app:layout_constraintRight_toRightOf="@id/guideline_right"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_bottom">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수정 완료"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
