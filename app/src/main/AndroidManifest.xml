@@ -14,14 +14,14 @@
         android:theme="@style/Theme.Woopy_Android"
         tools:targetApi="31">
         <activity
-            android:name=".EditOptionActivity"
+            android:name=".AdminManageActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".activity_option"
+            android:name=".AdminHomeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
