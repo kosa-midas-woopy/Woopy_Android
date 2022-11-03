@@ -1,14 +1,15 @@
-package com.indoor.woopy_android.view.activity
+package com.indoor.woopy_android.view.user
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.indoor.woopy_android.R
 import com.indoor.woopy_android.databinding.ActivityMainBinding
-import com.indoor.woopy_android.view.fragment.*
-import javax.xml.datatype.DatatypeFactory.newInstance
+import com.indoor.woopy_android.view.user.allfunction.AllFunctionFragment
+import com.indoor.woopy_android.view.user.home.HomeFragment
+import com.indoor.woopy_android.view.user.approval.RequestFragment
+import com.indoor.woopy_android.view.user.statistics.StatisticsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
                 }
                 R.id.menu_all_function -> {
-                    allFunctionFragment=AllFunctionFragment.newInstance()
+                    allFunctionFragment= AllFunctionFragment.newInstance()
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragments_frame,allFunctionFragment).commit()
                 }
