@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="홈"
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home"
+        />
+    <item
+        android:title="신청"
+        android:id="@+id/menu_request"
+        android:icon="@drawable/ic_plus_circle"
+        />
+    <item
+        android:title="통계"
+        android:id="@+id/menu_statistics"
+        android:icon="@drawable/ic_graph_bar_up"
+        />
+    <item
+        android:title="전체"
+        android:id="@+id/menu_all_function"
+        android:icon="@drawable/ic_three_line"
+        />
+</menu>
