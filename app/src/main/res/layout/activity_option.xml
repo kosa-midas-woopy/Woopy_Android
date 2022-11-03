@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity_option"
+        android:background="@color/black">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/bg_gray"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/bg_profile">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_back_btn"
+            app:layout_constraintStart_toEndOf="@id/guideline_left"
+            app:layout_constraintTop_toTopOf="@id/guideline_top"
+            />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/btn_back"
+            app:layout_constraintBottom_toBottomOf="@id/bg_profile"
+            android:text="이름"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:layout_marginBottom="50dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/btn_back"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            android:text="이메일"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintBottom_toBottomOf="@id/bg_profile"
+            android:text="김하늘"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:layout_marginBottom="50dp"
+            />
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/user_name"
+            android:text="hnkim@bgpworks.com"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="김하늘님의 정보"
+            android:textSize="13dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintTop_toTopOf="@id/guideline_top"
+            />
+
+        <TextView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수정"
+            android:textSize="13dp"
+            android:textColor="@color/light_gray"
+            app:layout_constraintEnd_toEndOf="@id/guideline_right"
+            app:layout_constraintTop_toTopOf="@id/guideline_top"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.065" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.935" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03" />
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bg_office"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/bg_gray"
+            app:layout_constraintTop_toBottomOf="@id/bg_profile"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/tv_office_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기업명"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/tv_department"
+                android:layout_marginLeft="27dp"
+                android:textSize="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="부서"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/tv_position"
+                android:layout_marginLeft="27dp"
+                android:textSize="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="직급"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="@id/guide_center"
+                android:layout_marginLeft="27dp"
+                android:textSize="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margintop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="참여일"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/tv_position"
+                android:layout_marginLeft="27dp"
+                android:textSize="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/office_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="모모모"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/tv_department"
+                android:layout_marginRight="27dp"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="인사과"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/tv_position"
+                android:layout_marginRight="27dp"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="과장"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="@id/guide_center"
+                android:layout_marginRight="27dp"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margintop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="참여일"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/tv_position"
+                android:layout_marginRight="27dp"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guide_center"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
